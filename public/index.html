@@ -3,27 +3,118 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
     <title>Document</title>
 </head>
 <body>
-    <nav>
-        <a href="pagina.html">Inicio</a>
-        <a href="pagina.html">Pagina</a>
-        <a href="profile.html">Perfil</a>
-        <a href="tags.html">Tags</a>
+
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">Navbar</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Link</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Dropdown
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">Action</a></li>
+                            <li><a class="dropdown-item" href="#">Another action</a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item" href="#">Something else here</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                <form class="d-flex" role="search">
+                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search"/>
+                    <button class="btn btn-outline-success" type="submit">Search</button>
+                </form>
+            </div>
+        </div>
     </nav>
+
     <header>
         <h1>Página Login</h1>
     </header>
 
-    <form action="" id="login">
-        <label for="">Usuario</label>
-        <input type="text" placeholder="Escribe un nombre de usuario" id="input1">
+    <nav class="navDeVerdad">
+        <ol>
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="profile.html">Perfil</a></li>
+            <li><a href="tags.html">Tags</a></li>
+        </ol>
+    </nav>
 
-        <label for="">Correo</label>
-        <input type="text" placeholder="Escribe tu correo" id="input2">
-
-        <button>Ingresar</button>
+    <form action="" id="forms">
+        <input type="text" id="username">
+        <input type="password" id="password">
+        <button id="login">login</button>
     </form>
+
+
+    <form>
+        <div>
+            <input type="radio" name="invitado" id="invitado">
+            <label for="invitado">Invitado</label>
+        </div>
+        
+        <div>
+            <input type="radio" name="invitado" id="ponente">
+            <label for="ponente">Ponente</label>
+        </div>
+        
+        <div>
+            <input type="radio" name="invitado" id="socio">
+            <label for="socio">Socio</label>
+        </div>
+
+        <button type="button" id="btnEnviar" disabled>Enviar</button>
+    </form>
+
+    <form action="">
+        <div id="oculto">
+            <select name="" id="paises">
+                <option value="0">-Selecciona un pais-</option>
+            </select>
+            <select name="" id="regiones">
+                <option value="0">-Selecciona una region-</option>
+            </select>
+        </div>
+
+        <div>
+            <input type="checkbox" name="terms" id="terms">
+            <label for="terms">Terminos y Condiciones</label>
+
+            <input type="checkbox" name="email" id="email">
+            <label for="email">Deseas que te mandemos un email</label>
+
+            <button id="finalizar" disabled>Finalizar</button>
+        </div>
+    </form>
+
+    <br>
+
+    <p>Etiam est odio, pellentesque vitae lectus eget, rutrum lobortis orci. Sed gravida pellentesque mollis. 
+        Maecenas tortor nisl, porttitor at eros sed, sollicitudin iaculis mi. Donec nunc dolor, iaculis non orci 
+        sed, varius ultrices lacus. Nulla leo felis, rhoncus a tincidunt sollicitudin, vestibulum vitae ligula. 
+        Curabitur vel mollis dolor. Cras blandit laoreet tellus, id sagittis risus semper id. Aliquam erat volutpat. 
+        Donec ac interdum eros.Integer porta li
+    </p>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" 
+    integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" 
+    crossorigin="anonymous"></script>
+    <script src="login.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
