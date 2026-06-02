@@ -6,20 +6,20 @@ const username = document.getElementById("username")
 const password = document.getElementById("passowrd")
 const btn_login = document.getElementById("login")
 
-const API_URL = "https://localhost:8000"
+const API_URL = "http://localhost:8000"
 
 const login1 = async () => {
     const user = {username:username.value,password:password.value}
     const res = await fetch(API_URL+"/login",{
-        method:"/post",
-        headers:{"content-type":"application-json"},
+        method:"POST",
+        headers:{"Content-Type":"application/json"},
         body:JSON.stringify(user)
     })
     const data = await res.json()
     if(data.login === true){
         sessionStorage.setItem("id",data.user.id)
         sessionStorage.name = data.user.name
-        window.location = "/profile"
+        window.location = `/profile/index.html?id=${data.user.id}`
     }else{
         alert("Credenciales incorrecto")
     }

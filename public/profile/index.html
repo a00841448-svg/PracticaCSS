@@ -3,10 +3,37 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Juego</title>
+    <style>
+        body {
+            margin: 0;
+            background: #1a1a2e;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            font-family: Arial, sans-serif;
+            color: white;
+        }
+        h1 { margin: 10px 0; }
+        #unity-canvas {
+            width: 960px;
+            height: 600px;
+        }
+    </style>
 </head>
 <body>
-    <h1 id="name">nombre default</h1>
+    <h1 id="name">Cargando...</h1>
+
+    <canvas id="unity-canvas"></canvas>
+
     <script src="profile.js"></script>
+    <script src="game/Build/game.loader.js"></script>
+    <script>
+        createUnityInstance(document.querySelector("#unity-canvas"), {
+            dataUrl:      "game/Build/game.data",
+            frameworkUrl: "game/Build/game.framework.js",
+            codeUrl:      "game/Build/game.wasm",
+        });
+    </script>
 </body>
 </html>
